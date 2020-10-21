@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <button onclick="displayDate()">The time is:</button>
+
+        <p id="demo"></p>
+    </head>
+<body>
+
+    <h1 onclick="this.innerHTML = 'Click on the picture below'">Click me</h1>
+    <link rel="stylesheet" href="stylesheet.css">
+    <img id="myImage" onclick="changeImage()" src="gr1.jpg" >
+
+
+<script>
+function changeImage() {
+  var image = document.getElementById('myImage');
+  if (image.src.match("gr1")) {
+    image.src = "gr2.jpg";
+  } else {
+    image.src = "gr1.jpg";
+  }
+}
+
+function displayDate() {
+            document.getElementById("demo").innerHTML = Date();
+        }
+</script>
+
+</body>
+</html>
